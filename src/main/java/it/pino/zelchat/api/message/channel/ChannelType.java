@@ -1,4 +1,4 @@
-package it.pino.zelchat.api.channel;
+package it.pino.zelchat.api.message.channel;
 
 /**
  * Represents the type of a {@link ChatChannel}

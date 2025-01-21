@@ -7,7 +7,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4a93cfec87404de485075646401ae92a)](https://app.codacy.com/gh/ZelChat/zelchat-api/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ![Repo](https://repo.pinodev.it/api/badge/latest/releases/it/pino/zelchat/api/?color=40c14a&name=Version&prefix=v)
 [![Reposilite](https://img.shields.io/badge/Reposilite-Repo-blue)](https://repo.pinodev.it/#/)
-[![Javadocs](https://img.shields.io/badge/Javadocs-DOCS-blue)](https://repo.pinodev.it/docs/zelchat/api/)
+[![Javadocs](https://img.shields.io/badge/Javadocs-DOCS-blue)](https://repo.pinodev.it/javadoc/releases/it/pino/zelchat/api/latest)
 
 **It's time to get full control over your minecraft server chat!**
 

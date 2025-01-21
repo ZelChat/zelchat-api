@@ -1,7 +1,7 @@
 package it.pino.zelchat.api.message;
 
-import it.pino.zelchat.api.channel.ChatChannel;
-import it.pino.zelchat.api.format.Format;
+import it.pino.zelchat.api.message.channel.ChatChannel;
+import it.pino.zelchat.api.message.format.Format;
 import it.pino.zelchat.api.player.infraction.message.ChatInfraction;
 import it.pino.zelchat.api.player.ChatPlayer;
 import net.kyori.adventure.text.Component;

@@ -1,4 +1,4 @@
-package it.pino.zelchat.api.channel;
+package it.pino.zelchat.api.message.channel;
 
 import net.kyori.adventure.audience.Audience;
 import org.jetbrains.annotations.NotNull;

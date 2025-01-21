@@ -1,4 +1,4 @@
-package it.pino.zelchat.api.format;
+package it.pino.zelchat.api.message.format;
 
 import it.pino.zelchat.api.message.ChatMessage;
 import org.jetbrains.annotations.NotNull;
