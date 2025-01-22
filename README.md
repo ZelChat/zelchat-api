@@ -39,6 +39,7 @@ Maven
     <groupId>it.pino.zelchat</groupId>
     <artifactId>api</artifactId>
     <version>LATEST</version>
+    <scope>provided</scope>
 </dependency>
 ```
 Gradle
