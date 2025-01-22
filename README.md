@@ -52,7 +52,7 @@ maven {
 ```
 ```sh
 dependencies {
-        implementation("it.pino.zelchat:api:LATEST")
+        compileOnly("it.pino.zelchat:api:LATEST")
 }
 ```
 <div align="center">
