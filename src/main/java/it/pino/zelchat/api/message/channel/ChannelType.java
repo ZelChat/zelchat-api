@@ -19,5 +19,10 @@ public enum ChannelType {
     /**
      * The channel is visible only to the {@link ChatChannel} viewers
      */
-    CUSTOM;
+    CUSTOM,
+
+    /**
+     * The channel is related to a private message
+     */
+    PRIVATE;
 }

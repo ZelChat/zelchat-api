@@ -1,14 +1,11 @@
 package it.pino.zelchat.api;
 
-
-import it.pino.zelchat.api.formatter.FormatterService;
-import it.pino.zelchat.api.player.infraction.ChatInfractionService;
-import it.pino.zelchat.api.player.ChatPlayerService;
+import it.pino.zelchat.api.module.ModuleManager;
+import it.pino.zelchat.api.player.ChatPlayerManager;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * The main API interface for ZelChat.
- */
+import java.util.concurrent.CompletionStage;
+
 public interface ZelChatAPI {
 
     /**
@@ -21,26 +18,20 @@ public interface ZelChatAPI {
     }
 
     /**
-     * Get the formatter service.
+     * Get the module manager.
      *
-     * @return the formatter service
+     * @return the module manager
      */
-    @NotNull FormatterService getFormatterService();
-
+    @NotNull
+    ModuleManager getModuleManager();
 
     /**
      * Get the player service.
      *
      * @return the player service
      */
-    @NotNull ChatPlayerService getPlayerService();
-
-    /**
-     * Get the infractions service.
-     *
-     * @return the infractions service
-     */
-    @NotNull ChatInfractionService getInfractionService();
+    @NotNull
+    ChatPlayerManager getPlayerService();
 
     /**
      * Get the server chat mute status.
@@ -54,6 +45,7 @@ public interface ZelChatAPI {
      *
      * @param value the new mute status
      */
-    void setChatMuted(boolean value);
+    CompletionStage<Boolean> setChatMuted(final boolean value);
+
 
 }

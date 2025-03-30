@@ -1,4 +1,6 @@
-package it.pino.zelchat.api.message;
+package it.pino.zelchat.api.message.state;
+
+import it.pino.zelchat.api.message.ChatMessage;
 
 /**
  * Represents the state of a {@link ChatMessage}

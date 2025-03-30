@@ -1,6 +1,7 @@
 package it.pino.zelchat.api.message.format;
 
 import it.pino.zelchat.api.message.ChatMessage;
+import it.pino.zelchat.api.message.format.type.FormatType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnmodifiableView;
@@ -19,7 +20,17 @@ public interface Format {
      * @return the name of this Format
      * @since 2.0.0
      */
-    @NotNull String getName();
+    @NotNull
+    String getName();
+
+    /**
+     * Get the type of this Format
+     *
+     * @return the type of this Format
+     * @since 2.0.0
+     */
+    @NotNull
+    FormatType getType();
 
     /**
      * Get the {@link Collection<FormatComponent>} of {@link FormatComponent} for this Format
@@ -38,7 +49,8 @@ public interface Format {
      * @return the weight of this Format
      * @since 2.0.0
      */
-    @Nullable Integer getWeight();
+    @Nullable
+    Integer getWeight();
 
     /**
      * Get the permission of this Format
@@ -46,6 +58,7 @@ public interface Format {
      * @return the permission of this Format
      * @since 2.0.0
      */
-    @Nullable String getPermission();
+    @Nullable
+    String getPermission();
 
 }

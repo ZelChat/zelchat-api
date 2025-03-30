@@ -1,12 +1,7 @@
-package it.pino.zelchat.api.formatter.module.priority;
+package it.pino.zelchat.api.module.priority;
 
-import it.pino.zelchat.api.formatter.module.internal.ChatModule;
+import it.pino.zelchat.api.module.ChatModule;
 
-/**
- * Represents the priority of a {@link ChatModule}
- * <p>⚠️ Priority will decide order of execution</p>
- * @since 2.0.0
- */
 public enum ModulePriority {
 
     /**

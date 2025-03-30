@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Collection;
 
 /**
- * Represents a ChatChannel handled from {@link it.pino.zelchat.api.message.ChatMessage}
+ * Represents a ChatChannel used by {@link it.pino.zelchat.api.message.ChatMessage}
  *
  * @since 2.0.0
  */
@@ -36,14 +36,4 @@ public interface ChatChannel {
      */
     void setViewers(@NotNull final Collection<Audience> viewers);
 
-    /**
-     * <p>Setting type to {@code CUSTOM} will forward the message to the viewers only</p>
-     * <p>Setting type to {@code EVERYONE} will forward the message to entire server</p>
-     * <p>Setting type to {@code STAFF} will forward the message to the staff</p>
-     *
-     * @param type the {@link ChannelType}
-     * @see ChannelType
-     * @since 2.0.0
-     */
-    void setType(@NotNull final ChannelType type);
 }

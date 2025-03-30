@@ -1,10 +1,12 @@
 package it.pino.zelchat.api.player;
 
+import it.pino.zelchat.api.message.infraction.DatabaseInfraction;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnmodifiableView;
 
+import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
@@ -43,14 +45,6 @@ public interface ChatPlayer {
     UUID getUniqueId();
 
     /**
-     * Get the player object related to the sender of this ChatPlayer
-     *
-     * @return the {@link Player} object
-     * @since 2.0.0
-     */
-    Optional<Player> getBukkitPlayer();
-
-    /**
      * Get the last message sent by the player
      *
      * @return the last message sent
@@ -65,6 +59,13 @@ public interface ChatPlayer {
      * @since 2.0.0
      */
     int getPoints();
+
+    /**
+     * Get the last infraction
+     * @return the last infraction
+     */
+    @Nullable
+    DatabaseInfraction getLastInfraction();
 
     /**
      * Get the state of the player's messages
@@ -110,7 +111,7 @@ public interface ChatPlayer {
      */
     @NotNull
     @UnmodifiableView
-    Set<UUID> getIgnoredPlayers();
+    Set<UUID> getHiddenPlayers();
 
     /**
      * Get the last player's uniqueId that sent a private message to this player

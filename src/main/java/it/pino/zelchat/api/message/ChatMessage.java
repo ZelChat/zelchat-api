@@ -2,10 +2,10 @@ package it.pino.zelchat.api.message;
 
 import it.pino.zelchat.api.message.channel.ChatChannel;
 import it.pino.zelchat.api.message.format.Format;
-import it.pino.zelchat.api.player.infraction.message.ChatInfraction;
+import it.pino.zelchat.api.message.infraction.ChatInfraction;
+import it.pino.zelchat.api.message.state.MessageState;
 import it.pino.zelchat.api.player.ChatPlayer;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -71,15 +71,6 @@ public interface ChatMessage {
     @NotNull Component getMessage();
 
     /**
-     * Get the tag resolver used in this ChatMessage
-     *
-     * @return the {@link TagResolver.Builder}
-     * @see TagResolver.Builder
-     * @since 2.0.0
-     */
-    @Nullable TagResolver.Builder getTagResolver();
-
-    /**
      * Get the mentioned players of this ChatMessage
      *
      * @return the viewers
@@ -98,9 +89,9 @@ public interface ChatMessage {
     @NotNull ChatChannel getChannel();
 
     /**
-     * Get if present the flag triggered in this message
+     * Get if present the infraction triggered in this message
      *
-     * @return the flag
+     * @return the infraction
      * @see ChatInfraction
      * @since 2.0.0
      */
@@ -122,19 +113,17 @@ public interface ChatMessage {
     void setMessage(final @NotNull Component message);
 
     /**
-     * Set the tag resolver used in this ChatMessage
-     *
-     * @param tagResolver the new tag resolver
-     * @since 2.0.0
-     */
-    void setTagResolver(final @NotNull TagResolver.Builder tagResolver);
-
-    /**
      * Set the format that will be used
      * @param format the new format
      * @since 2.0.0
      */
     void setFormat(final @NotNull Format format);
+
+    /**
+     * Set the channel that will be used
+     * @param channel the new channel
+     */
+    void setChannel(final @NotNull ChatChannel channel);
 
     /**
      * Set the flag that will be used

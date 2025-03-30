@@ -1,24 +1,15 @@
-package it.pino.zelchat.api.formatter.module.internal;
+package it.pino.zelchat.api.module;
 
-import it.pino.zelchat.api.formatter.module.priority.ModulePriority;
+import it.pino.zelchat.api.module.annotation.ChatModuleSettings;
 import it.pino.zelchat.api.message.ChatMessage;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * Represents a chat module that can handle chat messages
- * <p>You can also specify a {@link ModulePriority}</p>
+/** Represents a module that can handle chat messages
+ * <p>The execution of external modules will be handled after ZelChat internal modules!</p>
+ * <p>Requires {@link ChatModuleSettings} annotation to be present!</p>
  * @since 2.0.0
  */
 public interface ChatModule {
-
-    /**
-     * Get the priority of this module
-     * <p>⚠️ Priority will decide order of execution</p>
-     * @return the priority of this module
-     * @see ModulePriority
-     * @since 2.0.0
-     */
-    ModulePriority getPriority();
 
     /**
      * Load the module
@@ -35,11 +26,17 @@ public interface ChatModule {
     default void unload(){}
 
     /**
+     * Reload the module
+     * <p>This method will be called when the module is reloaded</p>
+     * @since 2.0.0
+     */
+    default void reload(){}
+
+    /**
      * Handle a chat message
      * <p>This method will be called before sending a chat message</p>
      * @param chatMessage the chat message
      * @since 2.0.0
      */
-    ChatMessage handleChatMessage(@NotNull ChatMessage chatMessage);
-
+     void handleChatMessage(final @NotNull ChatMessage chatMessage);
 }

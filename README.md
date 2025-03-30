@@ -145,7 +145,7 @@ package it.pino.example.addon.module;
 import it.pino.zelchat.api.formatter.module.external.ExternalModule;
 import it.pino.zelchat.api.formatter.module.priority.ModulePriority;
 import it.pino.zelchat.api.message.ChatMessage;
-import it.pino.zelchat.api.message.MessageState;
+import it.pino.zelchat.api.message.state.MessageState;
 import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
